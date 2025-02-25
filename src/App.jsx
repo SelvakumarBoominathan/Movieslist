@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import MovieList from "./components/MovieList.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
+import SearchBox from "./components/SearchBox.jsx";
+import MovieListHeading from "./components/MovieListHeading.jsx";
 
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
   return (
-    <div classname="container-fluid movie-app">
+    <div className="container-fluid movie-app">
       <div className="row d-flex align-items-center mt-4 mb-4">
-        <MivieListHeading heading="Movies" />
+        <MovieListHeading heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
 
